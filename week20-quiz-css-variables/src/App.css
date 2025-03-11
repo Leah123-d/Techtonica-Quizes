@@ -9,6 +9,7 @@
 
 /* Step 1: create a new styling to apply a color fill to the SVG under the "App-logo" class */
 .App-logo g {
+  fill:red, orange;
 
 }
 
