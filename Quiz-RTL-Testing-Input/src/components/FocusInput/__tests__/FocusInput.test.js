@@ -1,6 +1,6 @@
 import React from 'react';
 import FocusInput from '../FocusInput';
-import { render, fireEvent, cleanup } from '@testing-library/react';
+import { render, fireEvent, cleanup, screen } from '@testing-library/react';
 
 afterEach(cleanup);
 
@@ -19,3 +19,11 @@ test('clicking on button trigger focus on input', () => {
   // verify that the active element within the document has the text "Focus me!"
   expect(document.activeElement).toBe(getByPlaceholderText('Focus me!'));
 });
+
+test('there is not image in this component', () => {
+  const { container } = render(<FocusInput />); 
+
+  const image = screen.queryByText("img");
+  expect(image).not.toBeInTheDocument();
+
+})

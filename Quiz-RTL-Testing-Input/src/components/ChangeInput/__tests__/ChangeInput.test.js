@@ -1,6 +1,6 @@
 import React from 'react';
 import ChangeInput from '../ChangeInput';
-import { render, fireEvent, cleanup } from '@testing-library/react';
+import { render, fireEvent, cleanup, screen } from '@testing-library/react';
 
 afterEach(cleanup);
 
@@ -22,3 +22,11 @@ test('displays the correct greeting', () => {
   // verify that the greeting text has replaced "Anonymous User" with the changed input value
   expect(greeting.textContent).toBe("Welcome, Rafael!");
 });
+
+test("input has a placeholder", () => {
+  render (< ChangeInput />);
+
+  const inputCheck = screen.getByPlaceholderText('Your name');
+
+  expect(inputCheck).toBeInTheDocument;
+})
