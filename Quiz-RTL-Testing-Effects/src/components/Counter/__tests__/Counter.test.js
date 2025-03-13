@@ -1,8 +1,23 @@
 import React from 'react';
 import Counter from '../Counter';
-import { render, fireEvent, cleanup } from '@testing-library/react';
+import { render, fireEvent, cleanup, screen } from '@testing-library/react';
 
 afterEach(cleanup);
+
+test("Count starts with 0 and button is disabled", () => {
+  const { getByTestId } = render(<Counter />)
+
+  const count = getByTestId("count");
+  const button = getByTestId("button");
+
+  expect(count).toBeInTheDocument();
+  expect(button).toBeInTheDocument();
+  expect(count).toHaveTextContent("Clicked 0 times");
+  expect(button).toBeDisabled();
+  
+}
+
+)
 
 // 1️⃣ Count starts with 0 and button is disabled
 // - Render the Counter component
