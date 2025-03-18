@@ -17,3 +17,4 @@
 .env.production.local
 
 node_modules
+.env

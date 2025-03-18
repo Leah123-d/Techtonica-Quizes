@@ -10,11 +10,11 @@ function App() {
   }, []);
 
   function renderItems() {
-    return items.map((item, i) => {
+    return items.map((item, index) => {
       return (
-        <div key={i}>
-          <h3>{items.name}</h3>
-          <p>Price: {items.price}</p>
+        <div key={index}>
+          <h3>Item: {item.name}</h3>
+          <p>Price: {item.price}</p>
         </div>
       );
     });
@@ -23,7 +23,9 @@ function App() {
   return (
     <main>
       <h1>Example webshop</h1>
+
       {renderItems()}
+      
     </main>
   );
 }
