@@ -5,7 +5,7 @@ You have just joined your favorite company and have been tasked with printing ne
 - [ ] Debug the broken code so that it's working
 - [X] Correct the file architecture using command line
 - [X] node_modules are committed, remove them from repo on GitHub
-- [ ] Correct the server file’s directory by moving it to the appropriate directory
+- [X] Correct the server file’s directory by moving it to the appropriate directory
 - [ ] Update README with
     - screenshot of the app's webpage, 
     - document errors you encountered and how you fixed them, 
