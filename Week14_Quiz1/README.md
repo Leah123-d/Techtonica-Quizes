@@ -3,7 +3,7 @@
 You have just joined your favorite company and have been tasked with printing new data to a webpage. However, the existing files/directories are all jumbled up, and the code seems to have errors. Fix the bugs and sile structure. 
 
 - [ ] Debug the broken code so that it's working
-- [ ] Correct the file architecture using command line
+- [X] Correct the file architecture using command line
 - [X] node_modules are committed, remove them from repo on GitHub
 - [ ] Correct the server file’s directory by moving it to the appropriate directory
 - [ ] Update README with
