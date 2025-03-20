@@ -7,6 +7,11 @@ function Form({ onSendData }) {
     setInputValue(e.target.value);
   };
 
+  //DO NOT DELETE: the prop onSendData is a call back function
+  //for the child to send data back to the parent component. 
+  //when the user enters their email address it will saved to the function 
+  //then in the parent component it can use that data. 
+
   const handleSendData = () => {
     onSendData(inputValue);
   };
